@@ -1,11 +1,14 @@
-from scipy.stats import wilcoxon
+from scipy.stats import ttest_rel
 
-sr_faba = [0,0,0.67,1,0,0,1,1,0,0.33,1,1,0.67,0.33,0.33,0.67,1,1,1,1,1,0.67]
-sr_duo = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+FABA = [57.5, 87.5, 65, 62.5, 85, 80, 62.5, 85, 55, 60, 75, 55, 72.5, 57.5, 55, 60, 77.5, 87.5, 92.5, 92.5, 90, 90, 85, 87.5, 85, 75, 87.5, 85, 75, 62.5]
+DUO  = [77.5, 77.5, 62.5, 72.5, 85, 100, 72.5, 87.5, 72.5, 92.5, 90, 52.5, 82.5, 77.5, 82.5, 57.5, 62.5, 75, 82.5, 72.5, 57.5, 77.5, 65, 72.5, 65, 65, 55, 52.5, 65, 80]
 
-stat, p = wilcoxon(sr_faba, sr_duo, alternative='two-sided')
-print(p)
+t, p = ttest_rel(DUO, FABA)
+print("===============================")
+print("H1 Completion Time")
+print("t-statistic = ", t)
+print("p-value = ", p)
+print("===============================")
 
-print(len(sr_faba))
-print(len(sr_duo))
+
 
