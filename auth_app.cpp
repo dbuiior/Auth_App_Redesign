@@ -557,7 +557,7 @@ std::vector<std::string> GenerateChallengeFiles(const std::vector<std::string> &
     std::mt19937 g(rd());
     std::shuffle(incorrect.begin(), incorrect.end(), g);
 
-    std::vector<std::string> selected(incorrect.begin(), incorrect.begin() + 6);
+    std::vector<std::string> selected(incorrect.begin(), incorrect.begin() + 9);
     std::vector<std::string> combined = correct;
     combined.insert(combined.end(), selected.begin(), selected.end());
     std::shuffle(combined.begin(), combined.end(), g);
