@@ -63,13 +63,9 @@ python file_tracker.py history -n 50
 
 #### Methods:
 - `get_open_files_by_process(process_name)` - Dapatkan file yang dibuka oleh proses
-- `scan_open_files(process_name)` - Scan dan kategorikan file berdasarkan proses
-- `print_open_files(process_name)` - Print file yang dibuka dalam format readable
 - `start_monitoring(directories)` - Mulai monitoring real-time
 - `stop_monitoring()` - Hentikan monitoring
-- `get_recent_activities(limit)` - Dapatkan aktivitas terbaru
-- `export_to_json(output_file)` - Export ke JSON
-- `export_to_csv(output_file)` - Export ke CSV
+
 
 ## ⚠️ Catatan Penting
 
